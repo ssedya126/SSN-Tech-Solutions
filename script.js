@@ -290,5 +290,3 @@ nextBtn.addEventListener('click', playNext);
 
 // Initialize the player
 initPlaylist();
-
-
