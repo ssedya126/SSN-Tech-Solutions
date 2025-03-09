@@ -696,13 +696,19 @@ img{
 
 /* Dark Mode Styles */
 .dark-mode {
-  background-color: #121212;
+  background-color: #1a1a1a;
   color: #ffffff;
+ 
+  
+  
 }
 
 .dark-mode .btn {
   background-color: #333;
   color: #fff;
+}
+.dark-mode.video-info{
+	background: rgba(255,255,255,0.05);
 }
 
 
@@ -1000,9 +1006,7 @@ iframe {
 	border-radius: 10px;
 }
 
-.dark-mode.pricing-card{
-	background-color: #1e1e1e;
-	color: #ffff;
+
 }
 .dark-mode.pricing-card.price{
 	background-color: #007BFF;
@@ -1018,10 +1022,6 @@ iframe {
   color: #007BFF; /* Keep the price color consistent */
 }
 
-.dark-mode .btn {
-  background-color: #333;
-  color: #fff;
-}
 
 .dark-mode .faq-item {
   border-color: #444;
@@ -1241,4 +1241,72 @@ body {
 
 
 
+/* Video Container Styles */
+ .video-gallery {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.main-player {
+	background: #000;
+	border-radius: 10px;
+	overflow: hidden;
+	margin-bottom: 20px;
+}
+
+#mainVideo {
+	width: 100%;
+	height: 600px;
+}
+
+.playlist {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	gap: 15px;
+}
+
+.video-thumbnail {
+	position: relative;
+	cursor: pointer;
+	border-radius: 8px;
+	overflow: hidden;
+	transition: transform 0.3s;
+	
+}
+
+
+.video-thumbnail:hover {
+	transform: translateY(-5px);
+}
+
+.video-thumbnail img {
+	width: 100%;
+	height: 150px;
+	object-fit: cover;
+}
+
+.video-info {
+	padding: 10px;
+	background: #2a2a2a;
+	color: #fff;
+}
+
+.controls {
+	position: relative;
+	padding: 15px;
+	background: rgba(0,0,0,0.8);
+}
+
+#nextBtn {
+	position: absolute;
+	right: 20px;
+	bottom: 20px;
+	background: #00ff88;
+	color: #1a1a1a;
+	border: none;
+	padding: 10px 25px;
+	border-radius: 25px;
+	cursor: pointer;
+	font-weight: bold;
+}
 
