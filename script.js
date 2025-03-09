@@ -206,3 +206,89 @@ questionForm.addEventListener('submit', (event) => {
   addQuestionForm.style.display = 'none';
 });
 
+
+
+
+// Video playlist configuration
+const playlist = [
+	{
+		title: "Network Security Basics",
+		sources: [
+			{ src: "videos/network-Security.mp4", type: "video/mp4" },
+			
+		],
+		thumbnail: "videos/security-thumb.jpg"
+	},
+	{
+		title: "Data Center",
+		sources: [
+			{ src: "videos/data-center.mp4", type: "video/mp4" },
+			
+		],
+		thumbnail: "videos/cloud-thumb.jpg"
+	},
+	{
+		title: "cyber Security",
+		sources: [
+			{ src: "videos/cyber-Security.mp4", type: "video/mp4" },
+			
+		],
+		thumbnail: "videos/cyber-thumb.jpg"
+	}
+];
+
+
+
+
+
+// DOM Elements
+const mainVideo = document.getElementById('mainVideo');
+const playlistContainer = document.getElementById('playlist');
+const nextBtn = document.getElementById('nextBtn');
+let currentVideoIndex = 0;
+
+// Initialize playlist
+function initPlaylist() {
+	playlist.forEach((video, index) => {
+		const thumbnail = document.createElement('div');
+		thumbnail.className = 'video-thumbnail';
+		thumbnail.innerHTML = `
+			<img src="${video.thumbnail}" alt="${video.title}">
+			<div class="video-info">${video.title}</div>
+		`;
+		thumbnail.onclick = () => loadVideo(index);
+		playlistContainer.appendChild(thumbnail);
+	});
+	loadVideo(0);
+}
+
+// Load selected video
+function loadVideo(index) {
+	currentVideoIndex = index;
+	mainVideo.innerHTML = '';
+	
+	playlist[index].sources.forEach(source => {
+		const sourceElem = document.createElement('source');
+		sourceElem.src = source.src;
+		sourceElem.type = source.type;
+		mainVideo.appendChild(sourceElem);
+	});
+
+	mainVideo.load();
+	mainVideo.play();
+}
+
+// Next video functionality
+function playNext() {
+	currentVideoIndex = (currentVideoIndex + 1) % playlist.length;
+	loadVideo(currentVideoIndex);
+}
+
+// Event listeners
+mainVideo.addEventListener('ended', playNext);
+nextBtn.addEventListener('click', playNext);
+
+// Initialize the player
+initPlaylist();
+
+
