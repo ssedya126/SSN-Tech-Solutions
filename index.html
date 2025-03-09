@@ -350,104 +350,19 @@
   <footer>
     <div class="container">
       <p>&copy; 2023 SNN System & Networks. All rights reserved.</p>
-      <div class="social-links">
+     <!-- <div class="social-links">
         <a href="#">Facebook</a>
         <a href="#">Twitter</a>
         <a href="#">LinkedIn</a>
         <a href="#">Instagram</a>
-      </div>
+      </div>--> 
     </div>
   </footer>
-  <script>
-  // Get all navigation links
-  const navLinks = document.querySelectorAll('nav ul li a');
-
-  // Add click event listener to each link
-  navLinks.forEach(link => {
-    link.addEventListener('click', function () {
-      // Remove 'active' class from all links
-      navLinks.forEach(link => link.classList.remove('active'));
-      // Add 'active' class to the clicked link
-      this.classList.add('active');
-    });
-  });
-  // Get all buttons with the class 'btn'
-  const buttons = document.querySelectorAll('.btn');
-
-  // Add click event listener to each button
-  buttons.forEach(button => {
-    button.addEventListener('click', function () {
-      // Remove 'active-btn' class from all buttons
-      buttons.forEach(button => button.classList.remove('active-btn'));
-      // Add 'active-btn' class to the clicked button
-      this.classList.add('active-btn');
-    });
-  });
-</script>
-<script>
-  const typedTextSpan = document.querySelector('.typed-text');
-  const textArray = ["IT Solutions", "Innovation", "Technology"];
-  const typingDelay = 100;
-  const erasingDelay = 50;
-  const newTextDelay = 1000;
-  let textArrayIndex = 0;
-  let charIndex = 0;
-
-  function type() {
-    if (charIndex < textArray[textArrayIndex].length) {
-      typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
-      charIndex++;
-      setTimeout(type, typingDelay);
-    } else {
-      setTimeout(erase, newTextDelay);
-    }
-  }
-
-  function erase() {
-    if (charIndex > 0) {
-      typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex - 1);
-      charIndex--;
-      setTimeout(erase, erasingDelay);
-    } else {
-      textArrayIndex++;
-      if (textArrayIndex >= textArray.length) textArrayIndex = 0;
-      setTimeout(type, typingDelay);
-    }
-  }
-
-  document.addEventListener('DOMContentLoaded', function () {
-    if (textArray.length) setTimeout(type, newTextDelay);
-  });
-</script>
-<script>
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      e.preventDefault();
-      document.querySelector(this.getAttribute('href')).scrollIntoView({
-        behavior: 'smooth'
-      });
-    });
-  });
-</script>
+ 
 <a id="back-to-top" href="#" class="btn">
   <i class="fas fa-chevron-up"></i>
 </a>
 
-<script>
-  window.addEventListener('scroll', function() {
-    const backToTop = document.getElementById('back-to-top');
-    if (window.scrollY > 500) { 
-      backToTop.style.display = 'block';
-    } else {
-      backToTop.style.display = 'none';
-    }
-  });
-
-  document.getElementById('back-to-top').addEventListener('click', function(e) {
-    e.preventDefault();
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
-</script
 <!-- Floating WhatsApp Icon -->
 <a href="https://wa.me/256776012185" target="_blank" class="whatsapp-float">
   <i class="fab fa-whatsapp"></i> <!-- WhatsApp icon -->
@@ -459,17 +374,7 @@
   </button>
 </div>
 
-<!-- JavaScript -->
-<script>
-  // Dark Mode Toggle
-  const themeToggle = document.getElementById('theme-toggle');
-  themeToggle.addEventListener('click', () => {
-    document.body.classList.toggle('dark-mode');
-    themeToggle.innerHTML = document.body.classList.contains('dark-mode') ?
-      '<i class="fas fa-sun"></i> Toggle Light Mode' :
-      '<i class="fas fa-moon"></i> Toggle Dark Mode';
-  });
-</script>
+
 
 
 <!-- Loading Animation -->
@@ -530,27 +435,7 @@
 <!-- Interactive Maps Section -->
 
 <!-- JavaScript -->
-<script>
-  // Loading Animation
-  window.addEventListener('load', function () {
-    document.getElementById('loading').style.display = 'none';
-  });
 
-  // Count-Up Animation
-  const countElements = document.querySelectorAll('.count');
-  countElements.forEach((element) => {
-    const target = parseInt(element.getAttribute('data-target'));
-    let count = 0;
-    const interval = setInterval(() => {
-      if (count >= target) {
-        clearInterval(interval);
-      } else {
-        count++;
-        element.textContent = count;
-      }
-    }, 20);
-  });
-</script>
 <!-- Animated Scroll Reveal -->
 <section data-aos="fade-up">
   <h2>Our Services</h2>
@@ -558,9 +443,7 @@
 </section>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-<script>
-  AOS.init();
-</script>
+
 
 <!-- Pricing Tables -->
 <section class="pricing-section">
@@ -592,27 +475,7 @@
   <h2>Our Skills</h2>
   <canvas id="myChart" width="400" height="200"></canvas>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script>
-    const ctx = document.getElementById('myChart').getContext('2d');
-    const myChart = new Chart(ctx, {
-      type: 'bar',
-      data: {
-        labels: ['Python', 'JavaScript', 'Java'],
-        datasets: [{
-          label: 'Skill Level',
-          data: [90, 80, 70],
-          backgroundColor: ['#007BFF', '#28a745', '#dc3545'],
-        }]
-      },
-      options: {
-        scales: {
-          y: {
-            beginAtZero: true
-          }
-        }
-      }
-    });
-  </script>
+  
 </section>
 
 <!-- Client Logos Carousel -->
@@ -696,11 +559,6 @@
 <!-- Interactive Background -->
 <div id="particles-js"></div>
 <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-<script>
-  particlesJS.load('particles-js', 'particles.json', function() {
-    console.log('Particles loaded!');
-  });
-</script>
 
 <!-- Testimonials Slider -->
 <section class="testimonials-section">
@@ -724,76 +582,7 @@
   <a href="index.html" class="btn">Go Home</a>
 </div>
 
-  <!-- Optional JavaScript for Pause on Hover -->
-  <script>
-    const carousel = document.querySelector('.client-carousel');
+<script src="script.js"></script>
 
-    // Pause animation on hover
-    carousel.addEventListener('mouseenter', () => {
-      carousel.style.animationPlayState = 'paused';
-    });
-
-    // Resume animation on mouse leave
-    carousel.addEventListener('mouseleave', () => {
-      carousel.style.animationPlayState = 'running';
-    });
-  </script>
-<script>
-// Toggle FAQ Answers
-document.querySelectorAll('.faq-item h3').forEach((item) => {
-  item.addEventListener('click', () => {
-    const answer = item.nextElementSibling;
-    answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
-    item.querySelector('.toggle').textContent = answer.style.display === 'block' ? '-' : '+';
-  });
-});
-
-// Show Add Question Form
-const addQuestionBtn = document.getElementById('add-question-btn');
-const addQuestionForm = document.getElementById('add-question-form');
-
-addQuestionBtn.addEventListener('click', () => {
-  addQuestionForm.style.display = 'block';
-});
-
-// Add New Question
-const questionForm = document.getElementById('question-form');
-const faqList = document.getElementById('faq-list');
-
-questionForm.addEventListener('submit', (event) => {
-  event.preventDefault(); // Prevent form submission
-
-  const questionInput = document.getElementById('question-input');
-  const answerInput = document.getElementById('answer-input');
-
-  // Create new FAQ item
-  const newFaqItem = document.createElement('div');
-  newFaqItem.className = 'faq-item';
-
-  const newFaqQuestion = document.createElement('h3');
-  newFaqQuestion.innerHTML =`${questionInput.value}<span class="toggle">+</span>`;
-
-  const newFaqAnswer = document.createElement('p');
-  newFaqAnswer.className = 'answer';
-  newFaqAnswer.textContent = answerInput.value;
-
-  // Add toggle functionality to the new FAQ item
-  newFaqQuestion.addEventListener('click', () => {
-    newFaqAnswer.style.display = newFaqAnswer.style.display === 'block' ? 'none' : 'block';
-    newFaqQuestion.querySelector('.toggle').textContent = newFaqAnswer.style.display === 'block' ? '-' : '+';
-  });
-
-  // Append new FAQ item to the list
-  newFaqItem.appendChild(newFaqQuestion);
-  newFaqItem.appendChild(newFaqAnswer);
-  faqList.appendChild(newFaqItem);
-
-  // Clear the form
-  questionInput.value = '';
-  answerInput.value = '';
-  addQuestionForm.style.display = 'none';
-});
-
-</script>
 </body>
 </html>
