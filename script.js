@@ -214,7 +214,7 @@ const playlist = [
 	{
 		title: "Network Security Basics",
 		sources: [
-			{ src: "videos/network-Security.mp4", type: "video/mp4" },
+			{ src: "videos/network-security.mp4", type: "video/mp4" },
 			
 		],
 		thumbnail: "videos/security-thumb.jpg"
@@ -230,7 +230,7 @@ const playlist = [
 	{
 		title: "cyber Security",
 		sources: [
-			{ src: "videos/cyber-Security.mp4", type: "video/mp4" },
+			{ src: "videos/cyber-security.mp4", type: "video/mp4" },
 			
 		],
 		thumbnail: "videos/cyber-thumb.jpg"
