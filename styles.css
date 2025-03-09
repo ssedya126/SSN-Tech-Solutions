@@ -1299,7 +1299,7 @@ body {
 
 #nextBtn {
 	position: absolute;
-	right: 20px;
+	left: 45%;
 	bottom: 20px;
 	background: #00ff88;
 	color: #1a1a1a;
