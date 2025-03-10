@@ -513,11 +513,10 @@
   <!-- Add Question Form (Hidden by Default) -->
   <div id="add-question-form" class="add-question-form" style="display: none;">
     <h3>Add Your Question</h3>
-    <form id="question-form">
-      <input type="text" id="question-input" placeholder="Enter your question" required>
-      <textarea id="answer-input" placeholder="Enter the answer" required></textarea>
-      <button type="submit" class="btn">Submit</button>
-    </form>
+  <form id="question-form" action="send_email" method="post">
+  <input type="text" id="question-input" placeholder="Enter your question" required>
+  <button type="submit" class="btn">Submit</button>
+  </form>
   </div>
 </section>
 
