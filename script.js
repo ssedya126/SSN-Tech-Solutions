@@ -150,8 +150,7 @@
     carousel.addEventListener('mouseleave', () => {
       carousel.style.animationPlayState = 'running';
     });
- 
-// Toggle FAQ Answers
+// Toggle FAQ Answers 
 document.querySelectorAll('.faq-item h3').forEach((item) => {
   item.addEventListener('click', () => {
     const answer = item.nextElementSibling;
@@ -163,7 +162,6 @@ document.querySelectorAll('.faq-item h3').forEach((item) => {
 // Show Add Question Form
 const addQuestionBtn = document.getElementById('add-question-btn');
 const addQuestionForm = document.getElementById('add-question-form');
-
 addQuestionBtn.addEventListener('click', () => {
   addQuestionForm.style.display = 'block';
 });
@@ -171,41 +169,10 @@ addQuestionBtn.addEventListener('click', () => {
 // Add New Question
 const questionForm = document.getElementById('question-form');
 const faqList = document.getElementById('faq-list');
-
-questionForm.addEventListener('submit', (event) => {
-  event.preventDefault(); // Prevent form submission
-
-  const questionInput = document.getElementById('question-input');
-  const answerInput = document.getElementById('answer-input');
-
-  // Create new FAQ item
-  const newFaqItem = document.createElement('div');
-  newFaqItem.className = 'faq-item';
-
-  const newFaqQuestion = document.createElement('h3');
-  newFaqQuestion.innerHTML =`${questionInput.value}<span class="toggle">+</span>`;
-
-  const newFaqAnswer = document.createElement('p');
-  newFaqAnswer.className = 'answer';
-  newFaqAnswer.textContent = answerInput.value;
-
-  // Add toggle functionality to the new FAQ item
-  newFaqQuestion.addEventListener('click', () => {
-    newFaqAnswer.style.display = newFaqAnswer.style.display === 'block' ? 'none' : 'block';
-    newFaqQuestion.querySelector('.toggle').textContent = newFaqAnswer.style.display === 'block' ? '-' : '+';
-  });
-
-  // Append new FAQ item to the list
-  newFaqItem.appendChild(newFaqQuestion);
-  newFaqItem.appendChild(newFaqAnswer);
-  faqList.appendChild(newFaqItem);
-
+questionForm.addEventListener('submit', () => {
   // Clear the form
-  questionInput.value = '';
-  answerInput.value = '';
-  addQuestionForm.style.display = 'none';
+  addQuestionForm.style.display ='none';
 });
-
 
 
 
