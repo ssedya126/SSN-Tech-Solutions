@@ -1184,6 +1184,16 @@ body {
   color: #ffffff; /* White button text */
 }
 
+#theme-toggle.btn {
+  cursor: pointer;
+}
+
+#theme-toggle.btn:hover {
+  background-color: #ccc; /* Change the background color on hover */
+  color: #333; /* Change the text color on hover */
+}
+
+
 /* FAQ Section */
 .faq-section {
   padding: 50px 0;
@@ -1218,13 +1228,14 @@ body {
   color: black;
 }
 
-.add-question-form input,
+
 .add-question-form textarea {
   width: 100%;
   padding: 10px;
   margin-bottom: 10px;
   border: 1px solid #ddd;
   border-radius: 5px;
+  
 }
 
 .add-question-form button {
@@ -1240,6 +1251,15 @@ body {
   background-color: #0056b3;
 }
 
+
+#add-question-btn {
+  cursor: pointer;
+}
+
+#add-question-btn:hover {
+  background-color: #ccc; /* Change the background color on hover */
+  color: #333; /* Change the text color on hover */
+}
 
 
 /* Video Container Styles */
@@ -1285,9 +1305,9 @@ body {
 	height: 150px;
 	object-fit: cover;
 }
-
+/* texts transparent */
 .video-info {
-	padding: 10px;
+	padding: 50px;
 	background: #2a2a2a;
 	color: #fff;
 }
@@ -1301,7 +1321,7 @@ body {
 #nextBtn {
 	position: absolute;
 	left: 45%;
-	bottom: 20px;
+	bottom: 5px;
 	background: #00ff88;
 	color: #1a1a1a;
 	border: none;
