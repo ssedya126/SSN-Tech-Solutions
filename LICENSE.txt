@@ -1,30 +1,27 @@
-MIT License
+All content, images, and code on this website are copyrighted by Wamala Johnson and SNN Tech Solutions, 
+and are protected by international copyright laws.
 
-Copyright (c) 2023 SNN System & Networks
+All Rights Reserved 
+Copyright (c) 2023 SNN Tech Solutions
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+No part of this website, including but not limited to, text, images, audios
+, and videos, may be reproduced, distributed, or transmitted in any form or by any means, 
+including photocopying, recording, or by any electronic or mechanical means, 
+without the prior written permission of Wamala Johnson and SNN Tech Solutions.
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+Prohibited Uses
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+You may not:
 
----
+- Modify, adapt, or translate any content on this website
+- Use any content on this website for commercial purposes
+- Remove any copyright or proprietary notices from any content on this website
+- Use any content on this website in a way that suggests an association with or 
+endorsement by Wamala Johnson and SNN Tech Solutions
 
-Third-Party Licenses:
+Disclaimer
 
-- Bootstrap: MIT License (https://getbootstrap.com/)
-- Chart.js: MIT License (https://www.chartjs.org/)
-- Font Awesome: CC BY 4.0 License (https://fontawesome.com/license)
-- Google Fonts: Open Font License (https://fonts.google.com/)
+Wamala Johnson and SNN Tech Solutions make no representations or warranties of any kind, 
+express or implied, as to the accuracy, completeness,
+ or reliability of the information contained on this website.
+
