@@ -1190,13 +1190,24 @@ body {
 }
 
 .newsletter-section .btn {
-  background-color: #007BFF;
-  color: white;
+  background-color: #6495ED;
+  color: #fff;
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  text-decoration: none;
 }
+
+
+
+
+.newsletter-section :hover {
+  /* styles on hover */
+ color:#03055B ; /* Change to a darker blue on hover */
+}
+
+
 
 .dark-mode .newsletter-section .btn {
   background-color: #333; /* Dark button background */
@@ -1357,6 +1368,7 @@ body {
 .blue-link:hover {
   color:#C5CAE9 ; /* Change to a darker blue on hover */
 }
+
 .typed-text::after {
     content: '|';
     display: inline-block;
@@ -1374,3 +1386,40 @@ body {
     from { width: 0 }
     to { width: 100% }
 }
+
+/* Default Light Mode Styles */
+body {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+  background-color: #333;
+  color: #007BFF;
+}
+
+/* Dark Mode Toggle Button Styles */
+.dark-mode-toggle {
+  position: fixed;
+  top: 90%;
+  left: 85%;
+  transform: translate(-90%, -5%);
+  background-color: #333;
+  color: #f0f0f0;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+
+}
+
+.dark-mode-toggle i {
+  margin-right: 0.5rem;
+}
+
+
+
+
+
+
