@@ -1357,4 +1357,20 @@ body {
 .blue-link:hover {
   color:#C5CAE9 ; /* Change to a darker blue on hover */
 }
+.typed-text::after {
+    content: '|';
+    display: inline-block;
+    margin-left: 3px;
+    animation: blink 0.7s infinite;
+}
 
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
