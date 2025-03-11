@@ -1330,4 +1330,11 @@ body {
 	cursor: pointer;
 	font-weight: bold;
 }
+.blue-link {
+  color:#6495ED ;
+  text-decoration: none;
+}
 
+.blue-link:hover {
+  color:#C5CAE9 ; /* Change to a darker blue on hover */
+}
