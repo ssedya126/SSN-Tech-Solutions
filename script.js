@@ -161,6 +161,12 @@ document.addEventListener('DOMContentLoaded', function() {
     },
     retina_detect: true
   });
+
+  // Rest of your JS code...
+});
+
+
+
 // ==================== Typing Animation ====================
 const typedTextSpan = document.querySelector('.typed-text');
 const textArray = ["IT Solutions", "Innovation", "Technology"];
@@ -198,17 +204,40 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
+//darkModeToggle
+document.addEventListener('DOMContentLoaded', function() {
+  const themeToggle = document.getElementById('darkModeToggle');
+  
+  // Check localStorage for saved theme
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme === 'dark') {
+    document.body.classList.add('dark-mode');
+    themeToggle.innerHTML = '<i class="fas fa-sun"></i> Toggle Light Mode';
+  }
 
-
-
-
-
-
-  // Rest of your JS code...
+  themeToggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+    const isDarkMode = document.body.classList.contains('dark-mode');
+    
+    // Save to localStorage
+    localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
+    
+    // Update button icon
+    themeToggle.innerHTML = isDarkMode 
+      ? '<i class="fas fa-sun"></i> Toggle Light Mode'
+      : '<i class="fas fa-moon"></i> Toggle Dark Mode';
+  });
 });
 
 
+// Get the dark mode toggle button
+const darkModeToggle = document.getElementById('darkModeToggle');
 
+// Add event listener to the toggle button
+darkModeToggle.addEventListener('click', () => {
+  // Toggle dark mode class on the body element
+  document.body.classList.toggle('dark-mode');
+});
 
 
 
