@@ -1401,18 +1401,16 @@ body.dark-mode {
 
 /* Dark Mode Toggle Button Styles */
 .dark-mode-toggle {
-  position: fixed;
-  top: 90%;
-  left: 85%;
-  transform: translate(-55%, 2%);
+ position: fixed;
+  bottom: 160px;
+  right: 20px;
   background-color: #333;
   color: #f0f0f0;
   border: none;
   padding: 0.5rem 1rem;
   font-size: 1rem;
   cursor: pointer;
-
-  
+  z-index: 1000
 
 }
 
