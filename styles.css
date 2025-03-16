@@ -999,15 +999,13 @@ iframe {
 .error-page .btn:hover {
   background: #0056b3;
 }
-.chart=container{
+.chart-container{
 	background-color:transparent;
 	padding: 20px;
 	border-radius: 10px;
 }
 
-
-}
-.dark-mode.pricing-card.price{
+.dark-mode .pricing-card .price{
 	background-color: #007BFF;
 
 }
