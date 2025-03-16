@@ -1540,3 +1540,39 @@ body.dark-mode {
             gap: 10px;
             justify-content: center;
         }
+
+/* Mobile styles */
+@media only screen and (max-width: 768px) {
+  /* Add styles for mobile devices here */
+  .container {
+    width: 90%;
+  }
+  .logo {
+    width: 100px;
+  }
+}
+
+/* Tablet styles */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  /* Add styles for tablets here */
+  .container {
+    width: 80%;
+  }
+  .logo {
+    width: 150px;
+  }
+}
+
+/* Desktop styles */
+@media only screen and (min-width: 1025px) {
+  /* Add styles for desktops here */
+  .container {
+    width: 70%;
+  }
+  .logo {
+    width: 200px;
+  }
+}
+
+
+
