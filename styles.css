@@ -1005,11 +1005,6 @@ iframe {
 	border-radius: 10px;
 }
 
-.dark-mode .pricing-card .price{
-	background-color: #007BFF;
-
-}
-
 .dark-mode .pricing-card {
   background-color: #1e1e1e;
   color: #ffffff;
@@ -1269,103 +1264,154 @@ body {
   color: #333; /* Change the text color on hover */
 }
 
-
-/* Video Container Styles */
- .video-gallery {
-	max-width: 1200px;
-	margin: 0 auto;
+/* ===================== */
+/* Video Player Container */
+/* ===================== */
+.video-container {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 0 15px;
 }
 
-.main-player {
-	background: #000;
-	border-radius: 10px;
-	overflow: hidden;
-	margin-bottom: 20px;
+/* ===================== */
+/* Main Video Player */
+/* ===================== */
+#videoPlayer {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16/9; /* Maintain 16:9 aspect ratio */
+  background: #000;
+  border-radius: 10px;
+  display: block;
+  margin: 0 auto;
 }
 
-#mainVideo {
-	width: 100%;
-	height: 600px;
+/* ===================== */
+/* Video Controls */
+/* ===================== */
+.video-controls {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
 }
 
-.playlist {
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-	gap: 15px;
+.control-btn {
+  background: #007BFF;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 16px;
 }
 
-.video-thumbnail {
-	position: relative;
-	cursor: pointer;
-	border-radius: 8px;
-	overflow: hidden;
-	transition: transform 0.3s;
-	
+.control-btn:hover {
+  background: #0056b3;
+  transform: translateY(-2px);
 }
 
-
-.video-thumbnail:hover {
-	transform: translateY(-5px);
+/* ===================== */
+/* Video Playlist */
+/* ===================== */
+.video-playlist {
+  margin-top: 30px;
+  padding: 15px 0;
 }
 
-.video-thumbnail img {
-	width: 100%;
-	height: 150px;
-	object-fit: cover;
-}
-/* texts transparent */
-.video-info {
-	padding: 50px;
-	background: #2a2a2a;
-	color: #fff;
+#playlist {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
 }
 
-.controls {
-	position: relative;
-	padding: 15px;
-	background: rgba(0,0,0,0.8);
+#playlist li {
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
 }
 
-#nextBtn {
-	position: absolute;
-	left: 45%;
-	bottom: 5px;
-	background: #00ff88;
-	color: #1a1a1a;
-	border: none;
-	padding: 10px 25px;
-	border-radius: 25px;
-	cursor: pointer;
-	font-weight: bold;
-}
-.blue-link {
-  color:#6495ED ;
-  text-decoration: none;
+#playlist li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
-.blue-link:hover {
-  color:#C5CAE9 ; /* Change to a darker blue on hover */
+#playlist li.active {
+  border: 2px solid #007BFF;
 }
 
-.typed-text::after {
-    content: '|';
-    display: inline-block;
-    margin-left: 3px;
-    animation: blink 0.7s infinite;
+.thumbnail {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  display: block;
 }
 
-@keyframes blink {
-    0% { opacity: 1; }
-    50% { opacity: 0; }
-    100% { opacity: 1; }
+.video-title {
+  padding: 12px;
+  font-size: 14px;
+  color: #333;
+  text-align: center;
+  background: #f8f8f8;
 }
 
-@keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
+/* ===================== */
+/* Mobile Responsiveness */
+/* ===================== */
+@media (max-width: 768px) {
+  .video-container {
+    padding: 0 10px;
+  }
+
+  #playlist {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .control-btn {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
 }
 
-/* Default Light Mode Styles */
+@media (max-width: 480px) {
+  #playlist {
+    grid-template-columns: 1fr;
+  }
+
+  #videoPlayer {
+    border-radius: 0;
+  }
+
+  .control-btn {
+    width: 100%;
+    max-width: 200px;
+  }
+}
+
+/* ===================== */
+/* Dark Mode Support */
+/* ===================== */
+.dark-mode #playlist li {
+  background: #2a2a2a;
+}
+
+.dark-mode .video-title {
+  background: #333;
+  color: #fff;
+}
+
+.dark-mode #playlist li:hover {
+  background: #363636;
+}
+
+ /* Default Light Mode Styles */
 body {
   background-color: #f0f0f0;
   color: #333;
@@ -1390,133 +1436,4 @@ body.dark-mode {
   cursor: pointer;
   z-index: 1000
 
-}
-
-.dark-mode-toggle i {
-  margin-right: 0.5rem;
-}
-
-
-
-/* Video Player Styles */
-#videoPlayer {
-  width: 800px;
-  height: 450px;
-  border: none;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
-
-/* Video Playlist Styles */
-.video-playlist {
-  margin-top: 20px;
-}
-
-#playlist {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-#playlist li {
-  padding: 10px;
-  border-bottom: 1px solid #ccc;
-  cursor: pointer;
-}
-
-#playlist li:hover {
-  background-color: #f0f0f0;
-}
-
-/* Control Button Styles */
-.video-controls {
-  margin-top: 20px;
-}
-
-.control-btn {
-  background-color: #333;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
-  margin-right: 10px;
-}
-
-.control-btn:hover {
-  background-color: #444;
-}
-.video-container {
-  position: relative;
-  width: 800px;
-  height: 450px;
-}
-
-
-
-
- /* Main container styling */
-        .video-container {
-            max-width: 800px;
-            margin: 20px auto;
-            font-family: Arial, sans-serif;
-        }
-
-        /* Video player styling */
-        #videoPlayer {
-            width: 100%;
-            height: 450px;
-            background-color: #000;
-        }
-
-        /* Playlist styling */
-        .video-playlist {
-            margin-top: 20px;
-        }
-
-        .video-playlist ul {
-            list-style: none;
-            padding: 0;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
-        }
-
-        .video-playlist li {
-            cursor: pointer;
-            transition: transform 0.2s;
-            border: 2px solid transparent;
-            border-radius: 5px;
-            overflow: hidden;
-        }
-
-        .video-playlist li:hover {
-            transform: scale(1.03);
-        }
-
-        .video-playlist li.active {
-            border-color: #ff4444;
-        }
-
-        /* Thumbnail styling */
-        .thumbnail {
-            width: 100%;
-            height: 150px;
-            object-fit: cover;
-        }
-
-        .video-title {
-            padding: 8px;
-            background-color: #f5f5f5;
-            color: #333;
-            font-size: 14px;
-        }
-
-        /* Controls styling */
-        .video-controls {
-            margin-top: 15px;
-            display: flex;
-            gap: 10px;
-            justify-content: center;
-        }
-
-      
+} 
