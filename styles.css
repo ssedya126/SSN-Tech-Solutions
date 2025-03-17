@@ -570,7 +570,7 @@ img{
 .whatsapp-float {
   position: fixed;
   bottom: 20px; /* Distance from the bottom */
-  right: 20px; /* Distance from the right */
+  right: 40px; /* Distance from the right */
   background-color: #25D366; /* WhatsApp green color */
   color: #fff; /* White icon color */
   width: 60px; /* Icon size */
